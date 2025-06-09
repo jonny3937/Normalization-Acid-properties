@@ -70,8 +70,14 @@ example using a simplr table.
 - Prevents Anomalies: A table in 3NF is free from common anomalies such as:
 
 Insertion Anomaly: The inability to insert data without having to insert unwanted or redundant data.
+
+
 Update Anomaly: The need to update multiple rows of data when a change occurs in one place.
+
+
 Deletion Anomaly: The unintended loss of data when a record is deleted.
+
+
 - Preserves Functional Dependencies: 3NF ensures that all functional dependencies are preserved, meaning that the relationships between attributes are maintained.
 
 - Lossless Decomposition: When decomposing a relation to achieve 3NF, the decomposition should be lossless, meaning no information is lost in the process of normalization.
