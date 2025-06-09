@@ -6,7 +6,7 @@ Acid stands for
 - Durability
 
 These four key properties define how a transaction should be processed in reliable and predictable manner, ensuring that the database remains consistent, even in cases of failure ar concurrent accesses.
-![Alt text](ACID-Properties.jpg) 
+![Alt text](./assets/ACID-Properties.jpg) 
 
 ## 1. Atomicity 
 Atomicity ensures that a transaction is atomic, it means that either the entire transaction completes fully or doesn't execute at all. There is no in-between state i.e. transactions do not occur partially. If a transaction has multiple operations, and one of them fails, the whole transaction is rolled back, leaving the database unchanged. This avoids partial updates that can lead to inconsistency.
@@ -26,7 +26,7 @@ Example:
 
 **total before T occur = 500 + 200 = 700**
 total after T occurs = 400 + 300 = 700
-![Alt text](consistency.webp)
+![Alt text](./assets/consistency.webp)
 
 
 ## 3. Isolation : Ensuring Concurrent Transactions Don't Interfere

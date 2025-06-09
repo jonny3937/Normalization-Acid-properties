@@ -55,7 +55,7 @@ In second normal form there must be not any partial dependency of any column on 
 - Meet all requirements from first normal form
 - Eliminate subsets of data that apply to multiple rows and place them in a seperate table
 - create a relationship between new tables and their predecessors through the use of foreign keys.
-![Alt text](Second-Normal-Form-1.png)
+![Alt text](./assets/Second-Normal-Form-1.png)
 
 
 ### Third Normal Form
@@ -63,7 +63,7 @@ In second normal form there must be not any partial dependency of any column on 
 - Even though tables in 2NF have reduced redundancy compared to 1NF, they may still encounter issues like update anomalies. For example, if one row is updated and another one is not, this can lead to inconsistent data. This happens due to transitive dependencies, which 3NF resolves by removing such dependencies, making the database more reliable.
 
 example using a simplr table.
-![Alt text](Third-Normal-Form.jpeg)
+![Alt text](./assets/Third-Normal-Form.jpeg)
 #### Why is 3NF Important?
 - Eliminates Redundancy: 3NF helps to remove unnecessary duplication of data by ensuring that non-prime attributes (attributes not part of any candidate key) depend directly on the primary key, not on other non-prime attributes.
 
