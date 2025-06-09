@@ -1,1 +1,14 @@
-# NORMALIZATION 
+# NORMALIZATION IN DATABASE
+## Introduction
+Normalizatin is a technique used to organise data into databases. It is a systematic approach to remove the data redundancy and also improves data integrity.
+
+
+It involves dividing a large table into smaller , more manageable pieces based on functional dependencies among attributes, ensuring that data anomallies are minimized.
+Normalization is commonly used for two purpose   
+- Remove data redundancy.
+- Ensuring data dependencies of proper.
+
+
+Without data normalization anomallies occur and it becomes difficult to handle and Update data . To understand these i'll take anexamplle using a table,
+|ID    | Name    |Address   | Subject     |
+|------|---------|----------|-------------| 
