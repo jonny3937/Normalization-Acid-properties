@@ -46,7 +46,9 @@ now transformed to first normal form
 |Alex       | 20     | english     |
 |John       | 18     | english     |
 |Moses      | 21     | french      |
-using first normal form, data redundancy increases, as there will be many columns with the same data in multiple rows as a whole will be unique. 
+
+
+Using first normal form, data redundancy increases, as there will be many columns with the same data in multiple rows as a whole will be unique. 
 
 ### Second Normal Form
 In second normal form there must be not any partial dependency of any column on primary key .it means tha for a table that concatenate primary key,each column in the table that is not part of the primary key must depend upon the entire concatenated key for its existence.
@@ -58,7 +60,21 @@ In second normal form there must be not any partial dependency of any column on 
 
 ### Third Normal Form
 - Relation is **3NF** if it is in **2NF** and it contains no transitive dependencies.
-- Considerrelation R containing A,B and C.R(A,B,C)
--If A to B and B to C then A to C
-- Transitive Dependency: three attributes with the above dependencies 
+- Even though tables in 2NF have reduced redundancy compared to 1NF, they may still encounter issues like update anomalies. For example, if one row is updated and another one is not, this can lead to inconsistent data. This happens due to transitive dependencies, which 3NF resolves by removing such dependencies, making the database more reliable.
+
+example using a simplr table.
+![Alt text](Third-Normal-Form.jpeg)
+#### Why is 3NF Important?
+- Eliminates Redundancy: 3NF helps to remove unnecessary duplication of data by ensuring that non-prime attributes (attributes not part of any candidate key) depend directly on the primary key, not on other non-prime attributes.
+
+- Prevents Anomalies: A table in 3NF is free from common anomalies such as:
+
+Insertion Anomaly: The inability to insert data without having to insert unwanted or redundant data.
+Update Anomaly: The need to update multiple rows of data when a change occurs in one place.
+Deletion Anomaly: The unintended loss of data when a record is deleted.
+- Preserves Functional Dependencies: 3NF ensures that all functional dependencies are preserved, meaning that the relationships between attributes are maintained.
+
+- Lossless Decomposition: When decomposing a relation to achieve 3NF, the decomposition should be lossless, meaning no information is lost in the process of normalization.
+
+
 
