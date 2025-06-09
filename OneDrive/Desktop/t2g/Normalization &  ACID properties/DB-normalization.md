@@ -11,4 +11,8 @@ Normalization is commonly used for two purpose
 
 Without data normalization anomallies occur and it becomes difficult to handle and Update data . To understand these i'll take anexamplle using a table,
 |ID    | Name    |Address   | Subject     |
-|------|---------|----------|-------------| 
+|------|---------|----------|-------------|
+| 201  | Akshay  |  Hamas   |  Biology    |
+| 202  | Charu   |  Baha    |  Math       |
+| 203  | Disha   |  Baziah  |  English    |
+| 204  | Eva     |  Figi    |  French     |
