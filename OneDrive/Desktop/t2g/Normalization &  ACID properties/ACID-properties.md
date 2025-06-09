@@ -72,8 +72,17 @@ This property ensures that once the transaction has completed execution, the upd
 Example: After successfully transferring money from Account A to Account B, the changes are stored on disk. Even if there is a crash immediately after the commit, the transfer details will still be intact when the system recovers, ensuring durability.
 
 ##### How Acid Properties impact DB operations
-- Data integrity
-
+- Data integrity and consistency
+- Concurrency control
+- Recovery and Fault Torerance
+##### Disadvantages of Acid properties
+- Performance Overhead.
+- Complexity.
+- Scalability Issues.
+##### where acid can be applied
+ - **Banking**-used in transactions involving money transfer, deposits and withdrawals , this must maintain strict consistency and durability to prevent errors and fraud.
+ - **E-commerce** checks on inventories , order, and customer details are handled correctly and consistently,even during high traffic, requires ACID compliance.
+ - **Healthcare** patient records, test results, and prescription must adhere to strict consistency,integrity, and security stardards.
 
 
 
