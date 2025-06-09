@@ -14,7 +14,7 @@ Atomicity ensures that a transaction is atomic, it means that either the entire 
 - **Commit**: If the transaction is successful, the changes are permanently applied.
 - **Abort/Rollback**: If the transaction fails, any changes made during the transaction are discarded.
 
-## Consistency: Maintaining Valid Data States
+## 2. Consistency: Maintaining Valid Data States
 Consistency ensures that a database remains in a valid state before and after a transaction.
 
  It guarantees that any transaction will take the database from one consistent state to another, maintaining the rules and constraints defined for the data. In simple terms, a transaction should only take the database from one valid state to another. 
@@ -29,7 +29,7 @@ total after T occurs = 400 + 300 = 700
 ![Alt text](consistency.webp)
 
 
-## Isolation : Ensuring Concurrent Transactions Don't Interfere
+## 3. Isolation : Ensuring Concurrent Transactions Don't Interfere
 This property ensures that multiple transactions can occur concurrently without leading to the inconsistency of the database state. Transactions occur independently without interference.
 
 
@@ -44,6 +44,8 @@ This property prevents issues such as dirty reads (reading uncommitted data), no
 **Example: i'll consider two transactions t and t''
 
 - x=500, y = 500
+
+
 |     t     |    t''    |
 |-----------|-----------|
 |Read(x)    |Read(x)    |
@@ -64,7 +66,7 @@ This property prevents issues such as dirty reads (reading uncommitted data), no
 But, by the time T finishes, X and Y have changed to 450 and 550 respectively, so the correct sum should be 450 + 550 = 1000. Isolation ensures that T'' should not see the old values of X and Y while T is still in progress. Both transactions should be independent, and T'' should only see the final state after T commits. This prevents inconsistent data like the incorrect sum calculated by T''
 
 
-## Durability: Persisting Changes
+## 4. Durability: Persisting Changes
 This property ensures that once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs. These updates now become permanent and are stored in non-volatile memory. In the event of a failure, the DBMS can recover the database to the state it was in after the last committed transaction, ensuring that no data is lost.
 
 Example: After successfully transferring money from Account A to Account B, the changes are stored on disk. Even if there is a crash immediately after the commit, the transfer details will still be intact when the system recovers, ensuring durability.
