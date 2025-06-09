@@ -16,3 +16,6 @@ Without data normalization anomallies occur and it becomes difficult to handle a
 | 202  | Charu   |  Baha    |  Math       |
 | 203  | Disha   |  Baziah  |  English    |
 | 204  | Eva     |  Figi    |  French     |
+- Apdation Anormally-To update address of a students who accur twice or more than twice you are required to **update** Address column in all the rows, else data will become inconsistent.
+- Insertion Anormally-
+- Deletion Anormally- 
